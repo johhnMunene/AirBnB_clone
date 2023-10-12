@@ -32,5 +32,21 @@ class HBNBCommand(cmd.Cmd):
         """Quit command to exit the program"""
         return True
 
+    def precmd(self, line):
+        line = line.strip()
+        self._step.set_last_user_input(line)
+        if self._step.block_command(line):
+            self._set_command_blocked(True)
+            return cmd.Cmd.precmd(self, "return to default")
+        else:
+            self._set_command_blocked(False)
+            return cmd.Cmd.precmd(self, line)
+
+def create_too_many_wrong_args(self):
+        """Tests create with too many args all incorrect"""
+        pass
+
+    
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
