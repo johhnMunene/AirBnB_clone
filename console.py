@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 import cmd
+from model.base_model import BaseModel
 
 # Define a list of valid class names
-valid_classes = ["YourClass1", "YourClass2"]
+valid_classes = [BaseModel]
 
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
@@ -30,17 +31,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(self, line):
         """Quit command to exit the program"""
-        return True
-
-    def precmd(self, line):
-        line = line.strip()
-        self._step.set_last_user_input(line)
-        if self._step.block_command(line):
-            self._set_command_blocked(True)
-            return cmd.Cmd.precmd(self, "return to default")
-        else:
-            self._set_command_blocked(False)
-            return cmd.Cmd.precmd(self, line)
+        return True  
 
 def create_too_many_wrong_args(self):
         """Tests create with too many args all incorrect"""

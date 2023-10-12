@@ -33,15 +33,5 @@ class BaseModel:
         """Return the print/str representation of the BaseModel instance."""
         return str(self.to_dict())
 
-    @classmethod
-    def from_dict(cls, obj_dict):
-        """Create a new BaseModel instance from a dictionary representation"""
-        if "__class__" in obj_dict:
-            if obj_dict["__class__"] == cls.__name__:
-                obj_dict.pop("__class__")
-                if "created_at" in obj_dict:
-                    obj_dict["created_at"] = datetime.strptime(obj_dict["created_at"], "%Y-%m-%dT%H:%M:%S.%f")
-                if "updated_at" in obj_dict:
-                    obj_dict["updated_at"] = datetime.strptime(obj_dict["updated_at"], "%Y-%m-%dT%H:%M:%S.%f")
-                return cls(**obj_dict)
-        return None
+    
+    
