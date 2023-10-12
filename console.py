@@ -9,10 +9,12 @@ class HBNBCommand(cmd.Cmd):
     
     def do_create(self, line):
         if not line:
-            return "**class name missing**"
+            print("**class name missing**")
+            return 
         class_name = line.strip()
         if class_name not in valid_classes:
-            return "**class doesn't exist**"
+            print("**class doesn't exist**")
+            return 
         def do_destroy(self,line):
             
          new_instance = BaseModel() 
