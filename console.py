@@ -1,9 +1,15 @@
 #!/usr/bin/python3
 import cmd
-from model.base_model import BaseModel
+from models.base_model import BaseModel
+from models.user import User
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models import storage
 
 # Define a list of valid class names
-valid_classes = [BaseModel]
+valid_classes = ["BaseModel", "User", "State",
+                     "City", "Amenity", "Place", "Review"]
 
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "

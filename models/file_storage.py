@@ -43,7 +43,7 @@ class FileStorage:
                 data = json.load(file)
                 for key, obj_data in data.items():
                     
-                    obj = o (**obj_data)
+                    obj = O (**obj_data)
                     FileStorage.__objects[key] = obj
         except FileNotFoundError:
             pass
