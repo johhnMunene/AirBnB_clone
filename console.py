@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines the HBnB console."""
 import cmd
+from datetime import datetime
 from models.base_model import BaseModel
 from models.user import User
 from models.state import State
@@ -11,7 +12,7 @@ from models.review import Review
 from models import storage
 import re
 from shlex import split
-
+import models
 
 def parse(arg):
     curly_braces = re.search(r"\{(.*?)\}", arg)
