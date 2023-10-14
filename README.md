@@ -1,7 +1,7 @@
 # AirBnB clone - The console
+The AirBnB clone project starts now until… the end of the first year. The goal of the project is to deploy on your server a simple copy of the AirBnB website.
 
-
-![image](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20231012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231012T161947Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=72ed89d855877b39da18fcaee0294dc82eb1bdfbe9cb06b4c5ffc99d1ee55ec5)
+<p align="center"><img src= "https://media.itsnicethat.com/original_images/563b97a87fa44cff9d001760.gif" width="600" height="400"/></p>
 
 ### Concepts
 
