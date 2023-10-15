@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """Defines the HBnB console."""
 import cmd
-from datetime import datetime
+import re
+from shlex import split
+from models import storage
 from models.base_model import BaseModel
 from models.user import User
 from models.state import State
@@ -9,10 +11,7 @@ from models.city import City
 from models.place import Place
 from models.amenity import Amenity
 from models.review import Review
-from models import storage
-import re
-from shlex import split
-import models
+
 
 def parse(arg):
     curly_braces = re.search(r"\{(.*?)\}", arg)
@@ -33,6 +32,12 @@ def parse(arg):
 
 
 class HBNBCommand(cmd.Cmd):
+    """Defines the HolbertonBnB command interpreter.
+
+    Attributes:
+        prompt (str): The command prompt.
+    """
+
     prompt = "(hbnb) "
     __classes = {
         "BaseModel",
@@ -45,7 +50,7 @@ class HBNBCommand(cmd.Cmd):
     }
 
     def emptyline(self):
-        """Do nothing."""
+        """Do nothing upon receiving an empty line."""
         pass
 
     def default(self, arg):
