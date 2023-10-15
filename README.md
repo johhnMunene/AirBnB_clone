@@ -1,5 +1,31 @@
 # 0x00. AirBnB clone - The console
 
+<p align="center"><img src= "https://media.itsnicethat.com/original_images/563b97a87fa44cff9d001760.gif" width="600" height="400"/></p>
+
+- [Python Packages](https://intranet.alxswe.com/concepts/66)
+- [Airbnb Clone](#)
+
+### Resources
+Read or watch:
+
+- [cmd module]()
+- cmd module in depth
+- packages concept page
+- uuid module
+- datetime
+- unittest module
+- args/kwargs
+- Python test cheatsheet
+- cmd module wiki page
+- python unittest
+
+## More Info
+
+**Execution**
+
+Your shell should work like this in interactive mode:
+
+
 ## 0x00.Table of contents
 
 * [0x01 Introduction](#0x01-Introduction)
