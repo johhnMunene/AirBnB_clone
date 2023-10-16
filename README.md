@@ -129,4 +129,3 @@ guillaume@ubuntu:~/AirBnB$
 - GitHub repository: `AirBnB_clone`
 - File: `tests/`
 
-###
