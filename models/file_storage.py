@@ -5,12 +5,11 @@ Filestorage class
 """
 import json
 from models.base_model import BaseModel
-from models.user import User
-from models.state import State
-from models.city import City
-from models.place import Place
+from models.User import User
+from models.City import City
+from models.Place import Place
 from models.amenity import Amenity
-from models.review import Review
+
 import json
 
 class FileStorage:
@@ -43,7 +42,7 @@ class FileStorage:
                 data = json.load(file)
                 for key, obj_data in data.items():
                     
-                    obj = O (**obj_data)
+                    obj = o (**obj_data)
                     FileStorage.__objects[key] = obj
         except FileNotFoundError:
             pass
