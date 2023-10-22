@@ -1,9 +1,6 @@
-# AirBnB clone - The console
+# 0x00. AirBnB clone - The console
 
-
-![image](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20231012%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231012T161947Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=72ed89d855877b39da18fcaee0294dc82eb1bdfbe9cb06b4c5ffc99d1ee55ec5)
-
-### Concepts
+<p align="center"><img src= "https://media.itsnicethat.com/original_images/563b97a87fa44cff9d001760.gif" width="600" height="400"/></p>
 
 - [Python Packages](https://intranet.alxswe.com/concepts/66)
 - [Airbnb Clone](#)
@@ -28,7 +25,63 @@ Read or watch:
 
 Your shell should work like this in interactive mode:
 
+
+## 0x00.Table of contents
+
+* [0x01 Introduction](#0x01-Introduction)
+* [0x02 Environment](#0x02-Environment)
+* [0x03 Installation](#0x03-Installation)
+* [0x04 Testing](#0x04-Testing)
+* [0x05 Usage](#0x05-Usage)
+* [0x06 Authors](#0x06-Authors)
+
+## 0x01 Introduction
+
+Team project to build a clone of [AirBnB](https://www.airbnb.com/).
+
+The console is a command interpreter to manage objects abstraction between objects and how they are stored.
+
+To see the fundamental background of the project visit the [Wiki](https://github.com/ralexrivero/AirBnB_clone/wiki).
+
+The console willl perform the following tasks:
+
+* create a new object
+* retrive an object from a file
+* do operations on objects
+* destroy an object
+
+### Storage
+
+All the classes are handled by the `Storage` engine in the `FileStorage` Class.
+
+## 0x02 Environment
+
+<!-- ubuntu -->
+<a href="https://ubuntu.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Ubuntu&color=E95420&logo=Ubuntu&logoColor=E95420&labelColor=2F333A" alt="Suite CRM"></a> <!-- bash --> <a href="https://www.gnu.org/software/bash/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=GNU%20Bash&color=4EAA25&logo=GNU%20Bash&logoColor=4EAA25&labelColor=2F333A" alt="terminal"></a> <!-- python--> <a href="https://www.python.org" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Python&color=FFD43B&logo=python&logoColor=3776AB&labelColor=2F333A" alt="python"></a> </a> <!-- vim --> <a href="https://www.vim.org/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Vim&color=019733&logo=Vim&logoColor=019733&labelColor=2F333A" alt="Suite CRM"></a> <!-- vs code --> <a href="https://code.visualstudio.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Visual%20Studio%20Code&color=5C2D91&logo=Visual%20Studio%20Code&logoColor=5C2D91&labelColor=2F333A" alt="Suite CRM"></a> </a><!-- git --> <a href="https://git-scm.com/" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=Git&color=F05032&logo=Git&logoColor=F05032&labelColor=2F333A" alt="git distributed version control system"></a> <!-- github --> <a href="https://github.com" target="_blank"> <img height="" src="https://img.shields.io/static/v1?label=&message=GitHub&color=181717&logo=GitHub&logoColor=f2f2f2&labelColor=2F333A" alt="Github"></a>
+ <!-- Style guidelines -->
+* Style guidelines:
+  * [pycodestyle (version 2.8.0)](https://pypi.org/project/pycodestyle/)
+  * [PEP8](https://pep8.org/)
+
+All the development and testing was runned over an operating system Ubuntu 20.04 LTS using programming language Python 3.8.3. The editors used were VIM 8.1.2269, VSCode 1.6.1 and Atom 1.58.0 . Control version using Git 2.25.1.
+
+## 0x03 Installation
+
+```bash
+git clone https://github.com/aysuarex/AirBnB_clone.git
 ```
+
+change to the `AirBnb` directory and run the command:
+
+```bash
+ ./console.py
+```
+
+### Execution
+
+In interactive mode
+
+```bash
 $ ./console.py
 (hbnb) help
 
@@ -36,22 +89,22 @@ Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
 
-(hbnb) 
-(hbnb) 
+(hbnb)
+(hbnb)
 (hbnb) quit
 $
 ```
 
-But also in non-interactive mode: (like the Shell project in C)
+in Non-interactive mode
 
-```
+```bash
 $ echo "help" | ./console.py
 (hbnb)
 
 Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
-(hbnb) 
+(hbnb)
 $
 $ cat test_help
 help
@@ -62,11 +115,48 @@ $ cat test_help | ./console.py
 Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
-(hbnb) 
+(hbnb)
 $
 ```
 
-All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest discover tests" | bash`
+## 0x04 Testing
+
+All the test are defined in the `tests` folder.
+
+### Documentation
+
+* Modules:
+
+```python
+python3 -c 'print(__import__("my_module").__doc__)'
+```
+
+* Classes:
+
+```python
+python3 -c 'print(__import__("my_module").MyClass.__doc__)'
+```
+
+* Functions (inside and outside a class):
+
+```python
+python3 -c 'print(__import__("my_module").my_function.__doc__)'
+```
+
+and
+
+```python
+python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+```
+
+### Python Unit Tests
+
+* unittest module
+* File extension ``` .py ```
+* Files and folders star with ```test_```
+* Organization:for ```models/base.py```, unit tests in: ```tests/test_models/test_base.py```
+* Execution command: ```python3 -m unittest discover tests```
+* or: ```python3 -m unittest tests/test_models/test_base.py```
 
 ### Tasks
 
@@ -85,47 +175,3 @@ Write a `README.md`:
 
 - GitHub repository: `AirBnB_clone`
 - File: `README.md, AUTHORS`
-
-#### 1. Be pycodestyle compliant!
- Write beautiful code that passes the pycodestyle checks.
-
- **Repo**
- 
- - GitHub repository: `AirBnB_clone`
-
- ####  2. Unittests
- Write beautiful code that passes the pycodestyle checks.
-
- ```
- guillaume@ubuntu:~/AirBnB$ python3 -m unittest discover tests
-...................................................................................
-...................................................................................
-.......................
-----------------------------------------------------------------------
-Ran 189 tests in 13.135s
-
-OK
-guillaume@ubuntu:~/AirBnB$
- ```
-*Note that this is just an example, the number of tests you create can be different from the above example.*
-
-**Warning**
-
-Unit tests must also pass in non-interactive mode:
-
-```
-guillaume@ubuntu:~/AirBnB$ echo "python3 -m unittest discover tests" | bash
-...................................................................................
-...................................................................................
-.......................
-----------------------------------------------------------------------
-Ran 189 tests in 13.135s
-
-OK
-guillaume@ubuntu:~/AirBnB$
-```
-**Repo**
-
-- GitHub repository: `AirBnB_clone`
-- File: `tests/`
-
